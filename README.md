@@ -33,6 +33,9 @@ brew install clang-format
 // Removes build directory
 make clean
 
+// Formats code within the `include` and `src` folders
+make format
+
 // Generates makefile + build directory
 make generate
 

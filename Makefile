@@ -1,4 +1,4 @@
-all: clean build
+all: format clean build
 
 clean:
 	@echo "Cleaning up build 🧹"
