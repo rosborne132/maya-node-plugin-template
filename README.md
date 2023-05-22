@@ -22,6 +22,12 @@ Install ccache to cache your local builds to speed up your development time.
 brew install ccache
 ```
 
+#### clang-format
+Install clang-format to format your local code.
+```bash
+brew install clang-format
+```
+
 ## Project scripts
 ```bash
 // Removes build directory
