@@ -16,8 +16,12 @@ MStatus initializePlugin(MObject obj) {
 }
 
 MStatus uninitializePlugin(MObject obj) {
-  MFnPlugin fnPlugin(obj);
-  CHECK_MSTATUS_AND_RETURN_IT(fnPlugin.deregisterNode(CustomNode::typeId));
+  MStatus status;
+  MFnPlugin fnPlugin(obj, NULL, NULL, NULL, &status);
+  CHECK_MSTATUS_AND_RETURN_IT(status);
 
-  return MS::kSuccess;
+  status = fnPlugin.deregisterNode(CustomNode::typeId);
+  CHECK_MSTATUS_AND_RETURN_IT(status);
+
+  return status;
 }
